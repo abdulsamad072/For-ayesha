@@ -1,0 +1,97 @@
+/* Reset */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: black;
+    /* Black background for the scene */
+    color: white;
+}
+
+/* Three.js canvas container */
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* UI overlay container */
+#ui {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    /* Ensure it’s above canvas */
+    text-align: left;
+    width: 350px;
+}
+
+/* Prompt text */
+#prompt {
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Envelope button */
+#envelope button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffcc00;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+#envelope button:hover {
+    transform: scale(1.1);
+}
+
+/* Note styling */
+#note {
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Optional: Make text selectable */
+#note,
+#prompt {
+    user-select: none;
+}
+
+/* Mobile friendly adjustments */
+@media (max-width: 600px) {
+    #ui {
+        width: 90%;
+        bottom: 10px;
+        left: 5%;
+    }
+
+    #prompt {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #note {
+        font-size: 14px;
+    }
+}
